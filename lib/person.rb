@@ -17,6 +17,6 @@ class User
 end
 
 person = {name: "micah", age: "may", bio: "green"}
-me = User.new(person)
+me = Person.new(person)
 puts me.name
 puts me
