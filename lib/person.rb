@@ -5,9 +5,18 @@ class Person
   def initialize(params)
     params.each{|k,v| self.send("#{k}", v)}
   end
+  
 end
 
-person = {name: "micah", birthday: "may", eye_color: "green"}
-me = Person.new(person)
+class User
+  attr_accessor :name, :user_name, :age, :location, :bio
+ 
+  def initialize(attributes)
+    attributes.each {|key, value| self.send(("#{key}="), value)}
+  end
+end
+
+person = {name: "micah", age: "may", bio: "green"}
+me = User.new(person)
 puts me.name
 puts me
