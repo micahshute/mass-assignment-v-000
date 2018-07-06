@@ -6,3 +6,8 @@ class Person
     params.each{|k,v| self.send("#{k}", v)}
   end
 end
+
+person = {name: "micah", birthday: "may", eye_color: "green"}
+me = Person.new(person)
+puts me.name
+puts me
